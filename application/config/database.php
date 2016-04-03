@@ -45,6 +45,7 @@
 | the active record class
 */
 
+
 $active_group = 'local';
 $active_record = FALSE;
 
@@ -52,6 +53,7 @@ $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'usuario';
 $db['default']['password'] = 'senha';
 $db['default']['database'] = 'reciboja';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
