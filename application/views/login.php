@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <title>Helpdesk - Facileme</title>
+        <title>Boleto Já</title>
 
         <meta name="description" content="User login page" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,54 +51,6 @@
         window.jQuery || document.write("<script src='<?php echo base_url() ?>assets/admin/js/jquery-2.0.3.min.js'>" + "<" + "/script>");
     </script>
     <body class="login-layout">
-        <script>
-
-            var base_url = '<?php echo base_url() ?>';
-
-            window.fbAsyncInit = function() {
-                FB.init({
-                    appId: '305990076116431',
-                    status: true,
-                    xfbml: true
-                });
-            };
-
-            (function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) {
-                    return;
-                }
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//connect.facebook.net/pt_BR/all.js";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-
-
-            $(document).ready(function() {
-                $('.fb_login').on('click', function(e) {
-                    e.preventDefault()
-                    $('.fb_login, .submit').hide()
-                    $('.submit').hide().after('<i class="icon-spinner icon-spin orange bigger-200 loading pull-right"></i>')
-                    FB.login(function(response) {
-                        if (response.authResponse) {
-                            $.post(base_url + 'login/fb', response.authResponse, function(data) {
-                                $('.loading').remove()
-                                if (data.status == 'sucesso') {
-                                        location.href = data.redirect                                    
-                                } else {
-                                    alert(data.erro)
-                                    $('.fb_login, .submit').show()
-                                }
-                            }, "json")
-
-                        }
-                    }, {'scope': 'email'})
-                })
-            })
-
-
-        </script>
         <div class="main-container container-fluid">
             <div class="main-content">
                 <div class="row-fluid">
@@ -166,7 +118,7 @@
                                                         <i class="icon-arrow-left"></i>
                                                         Esqueci minha senha
                                                     </a>
-                                                </div>                                               
+                                                </div>
                                             </div>
                                         </div><!--/widget-body-->
                                     </div><!--/login-box-->

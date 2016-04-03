@@ -84,6 +84,7 @@ class CI_Image_lib {
 	 */
 	public function __construct($props = array())
 	{
+
 		if (count($props) > 0)
 		{
 			$this->initialize($props);
@@ -126,6 +127,7 @@ class CI_Image_lib {
 	 */
 	function initialize($props = array())
 	{
+
 		/*
 		 * Convert array elements into class variables
 		 */
@@ -146,7 +148,7 @@ class CI_Image_lib {
 		if ($this->source_image == '')
 		{
 			$this->set_error('imglib_source_image_required');
-			return FALSE;	
+			return FALSE;
 		}
 
 		/*
@@ -189,7 +191,7 @@ class CI_Image_lib {
 		// Set the Image Properties
 		if ( ! $this->get_image_properties($this->source_folder.$this->source_image))
 		{
-			return FALSE;	
+			return FALSE;
 		}
 
 		/*
@@ -399,7 +401,7 @@ class CI_Image_lib {
 		if ($this->rotation_angle == '' OR ! in_array($this->rotation_angle, $degs))
 		{
 			$this->set_error('imglib_rotation_angle_required');
-			return FALSE;	
+			return FALSE;
 		}
 
 		// Reassign the width and height

@@ -45,13 +45,13 @@
 | the active record class
 */
 
-$active_group = 'localserver';
-$active_record = TRUE;
+$active_group = 'local';
+$active_record = FALSE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['username'] = 'usuario';
+$db['default']['password'] = 'senha';
+$db['default']['database'] = 'reciboja';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -63,24 +63,6 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
-
-
-$db['localserver']['hostname'] = 'localserver';
-$db['localserver']['username'] = 'root';
-$db['localserver']['password'] = 'senha';
-$db['localserver']['database'] = 'helpdesk';
-$db['localserver']['dbdriver'] = 'mysql';
-$db['localserver']['dbprefix'] = '';
-$db['localserver']['pconnect'] = TRUE;
-$db['localserver']['db_debug'] = TRUE;
-$db['localserver']['cache_on'] = FALSE;
-$db['localserver']['cachedir'] = '';
-$db['localserver']['char_set'] = 'utf8';
-$db['localserver']['dbcollat'] = 'utf8_general_ci';
-$db['localserver']['swap_pre'] = '';
-$db['localserver']['autoinit'] = TRUE;
-$db['localserver']['stricton'] = FALSE;
-
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
